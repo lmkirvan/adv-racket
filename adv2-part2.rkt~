@@ -1,0 +1,14 @@
+#lang br
+
+;lower triangle matrix data representation
+
+(define in (open-input-file "/home/kirvanlewis/advent/adv2.txt"))
+(define adv (port->lines in))
+
+(define (list->id-seq ls)
+  (define (iter ls counter)
+    (cond ([(empty? ls) 0]
+           [else (cons counter (iter (cdr ls) (+ counter 1)))])))
+  (iter ls 0))
+
+(list->id-seq ls)

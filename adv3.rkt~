@@ -1,0 +1,5 @@
+#lang br
+(define in (open-input-file "/home/kirvanlewis/advent/advent3.txt"))
+(define adv (port-lines in))
+
+(display adv)
